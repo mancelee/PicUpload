@@ -1,0 +1,9 @@
+下面是系统与dll版本对应的注册bat文件(64位的系统对应64位dll文件，
+32位系统对应32位的dll文件，如果64位的系统安装32位的dll文件，请将下面的system32替换为SysWOW64即可。)
+
+
+@echo 开始注册
+copy CameraDll.dll %windir%\system32\
+regsvr32 %windir%\system32\CameraDll.dll /s
+@echo CameraDll.dll注册成功
+@pause
